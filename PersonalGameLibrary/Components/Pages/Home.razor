@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world! @_privateMessage</h1>
+
+Welcome to your new app.
+
+<Counter IncrementBy="40"/>
+
+@code
+{
+    private readonly string _privateMessage = "You will never find the job! Cheers!";
+}
