@@ -1,4 +1,4 @@
-namespace GameLibraryDb.models;
+namespace PersonalGameLibrary.Database.models;
 
 public class Screenshot
 {

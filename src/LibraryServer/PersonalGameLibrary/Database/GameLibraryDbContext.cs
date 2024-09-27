@@ -1,10 +1,15 @@
-using GameLibraryDb.models;
 using Microsoft.EntityFrameworkCore;
+using PersonalGameLibrary.Database.models;
 
-namespace GameLibraryDb;
+namespace PersonalGameLibrary.Database;
 
-public class GameLibraryDbContext(DbContextOptions options) : DbContext(options)
+
+public class GameLibraryDbContext : DbContext
 {
+    public GameLibraryDbContext(DbContextOptions<GameLibraryDbContext> options) : base(options)
+    {
+    }
+
     public DbSet<Game> Games { get; set; }
     public DbSet<Review> Reviews { get; set; }
     public DbSet<Screenshot> Screenshots { get; set; }
