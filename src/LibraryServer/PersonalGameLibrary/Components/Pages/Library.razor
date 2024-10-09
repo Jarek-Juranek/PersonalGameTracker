@@ -1,6 +1,17 @@
+@inject GameLibraryDbContext DbContextGame;
 @page "/library"
+@using GameLibraryDB.Database
+@using GameLibraryDB.Database.models
 
 <PageTitle>Library</PageTitle>
 
-<h1>Here goes your game library</h1>
+<h1 @onclick="Testtt">Here goes your game library</h1>
 
+@code
+{
+    private async Task Testtt()
+    {
+        DbContextGame.Games.Add(new Game());
+        await DbContextGame.SaveChangesAsync();
+    }
+}
