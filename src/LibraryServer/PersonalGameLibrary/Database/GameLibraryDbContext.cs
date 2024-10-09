@@ -3,16 +3,11 @@ using PersonalGameLibrary.Database.models;
 
 namespace PersonalGameLibrary.Database;
 
-
-public class GameLibraryDbContext : DbContext
+public class GameLibraryDbContext(DbContextOptions<GameLibraryDbContext> options) : DbContext(options)
 {
-    public GameLibraryDbContext(DbContextOptions<GameLibraryDbContext> options) : base(options)
-    {
-    }
-
-    public DbSet<Game> Games { get; set; }
-    public DbSet<Review> Reviews { get; set; }
-    public DbSet<Screenshot> Screenshots { get; set; }
+    public DbSet<Game> Games { get; init; }
+    public DbSet<Review> Reviews { get; init; }
+    public DbSet<Screenshot> Screenshots { get; init; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
