@@ -1,7 +1,7 @@
+using GameLibraryDB.Database.models;
 using Microsoft.EntityFrameworkCore;
-using PersonalGameLibrary.Database.models;
 
-namespace PersonalGameLibrary.Database;
+namespace GameLibraryDB.Database;
 
 public class GameLibraryDbContext(DbContextOptions<GameLibraryDbContext> options) : DbContext(options)
 {

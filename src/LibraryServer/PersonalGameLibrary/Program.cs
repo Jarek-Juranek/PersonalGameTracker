@@ -1,6 +1,6 @@
+using GameLibraryDB.Database;
 using Microsoft.EntityFrameworkCore;
 using PersonalGameLibrary.Components;
-using PersonalGameLibrary.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("GameLibraryDb") ?? throw new NullReferenceException("No connection string found");
